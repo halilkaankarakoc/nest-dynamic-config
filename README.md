@@ -27,13 +27,12 @@ export class AppModule {}
 ```ts
 import { DynamicConfig, DynamicConfigKey } from 'nest-dynamic-config';
 
-@DynamicConfig()
-export class ServerConfig {
+@DynamicConfig('optional-prefix')
+export class SomeConfig {
   @DynamicConfigKey('config-key')
   port: number;
 }
 ```
-
 
 ```ts
 import { NestFactory } from '@nestjs/core';
@@ -49,3 +48,6 @@ async function bootstrap() {
 
 bootstrap();
 ```
+
+### Usage
+Working example can be found here
