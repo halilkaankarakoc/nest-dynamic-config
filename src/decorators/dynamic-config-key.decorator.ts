@@ -1,11 +1,15 @@
-export const DYNAMIC_CONFIG_METADATA_KEY = '__dynamic_config__';
+export const DYNAMIC_CONFIGURATION_KEY_METADATA_KEY =
+  '__dynamicconfigurationkey__';
 
-export function DynamicConfigKey(options?: { prefix: string }) {
-  return function (target: any) {
+export function DynamicConfigKey(configKey: string) {
+  return function (target, propertyKey: string) {
     Reflect.defineMetadata(
-      DYNAMIC_CONFIG_METADATA_KEY,
-      { prefix: options?.prefix },
-      target.prototype,
+      `${DYNAMIC_CONFIGURATION_KEY_METADATA_KEY}.${propertyKey}`,
+      {
+        propertyKey,
+        configKey,
+      },
+      target,
     );
   };
 }
