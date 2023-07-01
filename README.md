@@ -50,4 +50,4 @@ bootstrap();
 ```
 
 ### Usage
-Working example can be found here
+Working example can be found [here](https://github.com/halilkaankarakoc/nest-dynamic-config/tree/main/examples/example-01)

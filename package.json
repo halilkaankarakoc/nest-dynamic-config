@@ -1,6 +1,6 @@
 {
   "name": "nest-dynamic-config",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Dynamic Configuration Module for Nestjs",
   "author": "Halil Kaan Karakoç <kaan.karakoc@gmail.com>",
   "license": "UNLICENSED",
