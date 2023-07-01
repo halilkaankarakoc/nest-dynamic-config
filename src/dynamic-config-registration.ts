@@ -2,9 +2,9 @@ import { Inject, Injectable } from '@nestjs/common';
 import { DynamicConfigOptions } from './dynamic-config.module';
 import { DiscoveryService } from '@nestjs/core';
 import { InstanceWrapper } from '@nestjs/core/injector/instance-wrapper';
-import { DYNAMIC_CONFIG_METADATA_KEY } from './decorators/dynamic-config-key.decorator';
+import { DYNAMIC_CONFIG_METADATA_KEY } from './decorators/dynamic-config.decorator';
 import { ConfigService } from './config-service';
-import { DYNAMIC_CONFIG_KEY_METADATA_KEY } from './decorators/dynamic-config.decorator';
+import { DYNAMIC_CONFIG_KEY_METADATA_KEY } from './decorators/dynamic-config-key.decorator';
 import * as fs from 'fs';
 
 @Injectable()
